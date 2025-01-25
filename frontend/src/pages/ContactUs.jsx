@@ -159,6 +159,26 @@ const ContactUs = () => {
             </form>
           </div>
         </div>
+
+        {/* Google Map and Address */}
+        <div className="mt-12 text-center">
+          <h2 className="text-2xl font-bold text-red-500 mb-4">Our Location</h2>
+          <div className="mb-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d868.0710433826706!2d35.20519915275137!3d33.26810079569561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151e7d8e7af34525%3A0xb3895f12fa1c723a!2s7694%2BFC4%2C%20Sour!5e0!3m2!1sen!2slb!4v1737798521421!5m2!1sen!2slb"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+
+          </div>
+          <p className="text-lg text-gray-700">
+            Athar Neighborhood, Friends Caffe Street, Tyre, Lebanon
+          </p>
+        </div>
       </div>
     </div>
   );
