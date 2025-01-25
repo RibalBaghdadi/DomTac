@@ -13,11 +13,11 @@ const ProductItem = ({ id, image, name, price }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link to={`/product/${id}`} className="block">
-        <div className="relative">
+        <div className="relative w-full h-64 flex items-center justify-center bg-white">
           <img
             src={image[0]}
             alt={name}
-            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+            className="max-w-full max-h-full object-contain"
           />
 
           <div 
@@ -33,7 +33,7 @@ const ProductItem = ({ id, image, name, price }) => {
         </div>
 
         <div className="p-4">
-          <h3 className="text-lg font-semibold text-gray-800 truncate mb-2">{name}</h3>
+          <h3 className="text-lg font-semibold text-gray-800 break-words w-full">{name}</h3>
           <span className="text-xl font-bold text-red-600">{currency}{price.toFixed(2)}</span>
         </div>
       </Link>
