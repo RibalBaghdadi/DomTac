@@ -27,14 +27,14 @@ const Navbar = () => {
 
       <div className='flex items-center gap-6'>
         <Link to={'/shop'}><FaSearch className='w-5 h-5 cursor-pointer hover:text-red-500' /></Link>
-        <img onClick={() => setVisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden' alt="Menu" />
+        <img onClick={() => setVisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden invert' alt="Menu" />
       </div>
 
       {/* Sidebar menu for small screens */}
       <div className={`absolute top-0 right-0 overflow-hidden bg-black transition-all z-50 ${visible ? 'h-[510px] w-full max-h-[500px]' : 'w-0 h-0'}`}>
         <div className='flex flex-col text-white'>
           <div onClick={() => setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
-            <img className='h-4 rotate-180 text-white' src={assets.menu_icon} alt="Close Menu" />
+            <img className='h-4 rotate-180 text-red' src={assets.menu_icon} alt="Close Menu" />
             <p>Back</p>
           </div>
           <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to="/">Home</NavLink>
